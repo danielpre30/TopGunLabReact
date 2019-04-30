@@ -3,9 +3,9 @@ Daniel Preciado Tamayo
 
 ## Clase 1 - 27/04/2019
 
-Protocolo IP
-DNS
-Protocolo TCP/IP
+- Protocolo IP
+- DNS
+- Protocolo TCP/IP
 
 ### HTML (HyperText Markup Language)
 Determina el contenido de la pagina web pero no su funcionalidad
