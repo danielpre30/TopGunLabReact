@@ -195,11 +195,11 @@ Funciona con:
 - var: a nivel de bloque
 - Indicando solo el nombre de la variable: a nivel global
 
-## Condiciones
+### Condiciones
 - if
 - switch
 
-## Ciclos
+### Ciclos
 
 - for 
 - do ... while
@@ -212,15 +212,183 @@ Funciona con:
 - break: Use la sentencia break para salir de un bucle, switch, o en conjunto con una sentencia label.
 - continue: La sentencia continue puede usarse para reiniciar una sentencia while, do-while, for, o label.
 
-## Programacion funcional
+### Programacion funcional
 
 - map: Crea un nuevo arreglo a partir de la aplicación de las sentencias entregadas sobre cada elemento. (valor, index)
 - filter: Encuentra el primer elemento del arreglo que cumpla con la condición entregada, si ninguno cumple, devuelve undefined.
 - find: Crea un nuevo arreglo con los elementos del arreglo que cumplan con la condición entregada.
 - reduce: Aplica la función entregada a un acumulador y cada elemento para reducirlo a un sólo valor.
 
-## Funciones
+### Funciones
 
 Funciones anonimas
 Arrow functions
 (parametros) => {}
+
+** Ejercicio rama practice
+
+## Clase 3: API ( Application Programming Interface)  - 18/05/2019
+
+- Permite comunicación entre 2 aplicacíones
+    - Request
+    - Response
+- Abstracción del proceso real que esta sucediendo
+- Es necesario conocer la interfaz de la API (Documentacion)
+- Código reutilizable
+
+### Browser API
+
+- DOM
+- Fetch API: 
+- Web Audio API
+- WebGL
+
+### DOM: Document Object Model
+- Creado por el navegador
+- Arbol de objetos
+- como son objetos, podemos:
+    - Crear - **Create**
+    - Cambiar - **Change**
+    - Obtener - **Get**
+    - Eliminar - **Delete**
+
+#### Crear
+
+- document.createElement(elementString)
+- document.createTextNode(string)
+- node.textContent
+- node.innerHTML
+
+#### Insertar
+
+- ParentNode.appendChild(element)
+- ParentNode.insertBefore(newNode, nextSibling)
+- ParentNode.replaceChild(newNode, oldNode)
+
+#### Cambiar
+
+- element.attribute = newValue
+- element.style.property = newStyle
+- element.setAttribute(attribute, value)
+- element.classList.(add || remove || toggle)
+
+#### Eliminar
+
+- parentNode.removeChild(element)
+- element.remove()
+
+#### Obtener
+
+- document.querySelector(selector)
+- document.querySelectorAll(selector)
+- document.getElementsByClassName(class)
+- document.getElementById(id)
+- element.getAttribute(attribute)
+
+#### Event handlers
+
+- element.onclick = function() {}
+- element.onmouseenter = function() {}
+- element.onmouseleave = function() {}
+
+#### Event bubbling & capturing (Importante !!!!)
+
+Cuando un elemento padre tiene un evento y sus hijos tambien tienen eventos propios
+
+Bubbling: El evento se propaga desde el elemento mas interno hasta el mas externo (por defecto)
+Capturing: El evento se propaga desde el elemento mas externo hasta el mas interno
+
+Propagación de eventos en el DOM
+
+```javascript
+event.stopPropagation() 
+```
+
+#### Event listeners
+
+```javascript
+element.addEventListener(event, function, useCapture) //useCapture especifica si se usa capturing
+```
+
+### Web Api
+
+- A través de HTTP (Hypertext Transfer Protocol)
+- Desde cualquier lenguaje de programación
+- Cualquier contexto
+- Petición HTTP
+- Devuelve una representación de información
+    - JSON
+    - XML
+
+#### Request
+
+```javascript
+GET /students/http-basics HTTP/1.1
+Host: www.topgun.com
+Connection: keep-alive
+Cache-Control: no-cache
+Pragma: no-cache
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+```
+
+##### Verbos
+
+- Get
+- Post
+- Put
+- Delete
+
+- Options
+-Trace
+- Head
+
+##### Response
+
+```javascript
+HTTP/1.1 200 OK
+Date: Fri, 31 Dec 2003 23:59:59 GMT
+Content-Type: application/json
+Content-Length: 1221
+
+{ ...JSON }
+```
+
+1xx: Infomativo
+2xx: Exitoso
+3xx: Redirección
+4xx: Error del cliente
+5xx: Error del servidor
+
+Endpoints: Urls que devuelven la información formateada
+
+##### REST API (Representational state transfer)
+
+- Recursos
+- URLs Rule! 💪
+- Verbos HTTP
+
+##### SOAP (Simple Object Access Protocol)
+
+- Acciones
+- Siempre POST
+
+### Fetch API
+
+#### Peticiones HTTP
+
+Retorna una promesa
+
+```javascript
+fetch('http://example.com/movies.json')
+  .then(function(response) {
+      return response.json();
+  })
+  .then(function(myJson) {
+      console.log(myJson);
+  })
+  .catch(function(error) {
+      console.log('Error:' + error.message);
+  });
+```
+
+Ejercicio third-party
