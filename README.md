@@ -392,3 +392,160 @@ fetch('http://example.com/movies.json')
 ```
 
 Ejercicio third-party
+
+## Clase 4 - 01/06/2019
+
+### ES6
+
+- Exports imports
+- Classes
+- destructuring
+- spread operator
+
+### Exports imports
+
+```javascript
+// Export
+const miVariable = "Top Gun Lab";
+export default miVariable;
+ 
+// Import
+import miVariable from "...";
+```
+
+```javascript
+	
+// Export
+export const miVariable = "Top Gun Lab";
+ 
+// Import
+import { miVariable } from "...";
+```
+
+### Classes
+
+```javascript
+class Poligono {
+  constructor (height, width) {
+      this.height = height;
+      this.width = width;
+  }
+ 
+  // Getter
+  get area  ()   {
+      return this.calcArea();
+  }
+ 
+  // Método
+  calcArea () {
+      return this.height * this.width ;
+  }
+}
+ 
+const cuadrado = new Poligono (10, 10);
+ 
+console.log(cuadrado.area); // 100 
+```
+
+### Spread operator
+
+- Arreglos
+
+```javascript
+const miArreglo = ["Camilo", "Robin", "David"];
+const miNuevoArreglo = [...miArreglo, "Laura"];
+
+console.log(miNuevoArreglo); //[ 'Camilo', 'Robin', 'David', 'Laura' ]
+
+const miObjeto = {
+    nombre: "Robin",
+    apellido: "Hurtado"
+};
+```
+
+- Objetos
+
+```javascript
+const miNuevoObjeto = {
+    ...miObjeto,
+    profesion: "Front End Dev"
+};
+
+console.log(miNuevoObjeto);
+
+// {    
+//     nombre: 'Robin',
+//     apellido: 'Hurtado',
+//     profesion: 'Front End Dev'
+// }
+```
+
+### Destructuring
+
+- Arreglos
+
+```javascript
+const miArreglo = ["Camilo", "Robin", "David"];
+
+const [primero, segundo, tercero] = miArreglo;
+
+console.log(primero); // "Camilo"
+console.log(segundo); // "Robin"
+console.log(tercero); // "David"
+```
+
+- Objetos
+
+```javascript
+const miObjeto = {
+    nombre: "Robin",
+    apellido: "Hurtado",
+    profesion: "Front End Dev"
+};
+
+const {nombre, apellido, profesion} = miObjeto;
+
+console.log(nombre); // "Robin"
+console.log(apellido); // "Hurtado"
+console.log(profesion); // "Front End Dev"
+```
+
+### Create-react-app
+
+#### Instalación
+
+npm install create-react-app -g
+
+#### Crear proyecto
+
+npx create-react-app my-app
+cd my-app
+npm start
+
+- Manejador de dependencias
+- Bundler (Webpack)
+- Servidor de desarrollo
+
+### Props
+
+Es un objeto con las propiedades que reciben los componentes. Éstos son pasados como "atributos" en el JSX.
+
+Son una manera de compartir información entre un componente padre y un componente hijo
+
+#### Children
+
+Es una propiedad que provee React para acceder al contenido que se ha pasado entre la etiqueta de apertura y la de cierre, en otras palabras, para acceder a los hijos.
+
+### State
+
+Es un objeto con información que afecta el método render de un componente, el estado puede ser creado, leído y actualizado dentro del componente al que pertenece.
+
+El componente es re-renderizado cada vez que el estado es actualizado.
+
+
+```javascript
+
+```
+```javascript
+
+```
