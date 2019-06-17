@@ -1,4 +1,5 @@
 # TopGunLab React
+
 Daniel Preciado Tamayo
 
 ## Clase 1 - 27/04/2019
@@ -8,37 +9,46 @@ Daniel Preciado Tamayo
 - Protocolo TCP/IP
 
 ### HTML (HyperText Markup Language)
+
 Determina el contenido de la pagina web pero no su funcionalidad
 
 #### Elementos
+
 - Etiquetas de apertura y cierre
 - Contenido
 - Atributo
 
 #### Elementos de:
+
 - Bloque: Ocupa todo el ancho de la pantalla
 - Linea: El contenido determina el ancho
 
 ### DOM - Document Object Model
+
 Es un árbol con los elementos del HTML
 
 ### CSS
+
 Modelo de Caja
+
 - Padding
 - Border
 - Margin
 
 #### Propiedad box-sizing:
+
 - content-box (por defecto)
 - border-box
 
 #### Selectores
+
 - Etiqueta
 - Class .
 - Id #
 - Pseudoclases: Es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado :
 
 #### Especificidad
+
 Prioridad en la que se aplican los estilos
 
 Style, ID, Class/Pseudo-class/attribute, elements
@@ -46,12 +56,15 @@ Style, ID, Class/Pseudo-class/attribute, elements
 Si tienen la misma queda el ultimo elemento
 
 ### Git
+
 Control de Versiones
 
 ### Nodeschool
+
 https://nodeschool.io/es/
 
 #### Javascripting
+
 https://github.com/timoxley/functional-javascript-workshop
 
 ## Clase 2: Javascript - 11/05/2019
@@ -72,7 +85,7 @@ Débilmente tipado
 
 ### ¿Como ejecutar javascript?
 
-####Navegador
+#### Navegador
 
 Devtools
 Archivo html
@@ -80,9 +93,9 @@ Archivo html
 #### Node.js
 
 - Consola
-    - node
+  - node
 - Archivo js
-    - node archivo.js
+  - node archivo.js
 
 ### Tipos de datos
 
@@ -101,14 +114,14 @@ typeof(variable)
 - Importante mantener un estándar
 
 - Funciones
-    - repeat(2)
-    - lenght
-    - trim()
-    - indexof(G)
-    - charAt()
-    - split(" ")
-    - concat()
-    - '${} something'
+  - repeat(2)
+  - lenght
+  - trim()
+  - indexof(G)
+  - charAt()
+  - split(" ")
+  - concat()
+  - '\${} something'
 
 #### Number
 
@@ -116,6 +129,7 @@ toFixed(2)
 toExponential(3)
 
 - Metodos Globales
+
 ```
 parseInt(a, 10)
 parseFloat(b,10)
@@ -172,7 +186,7 @@ var arreglo = []
 
 ## Variables
 
-Puede contener letras, digitos, $, _
+Puede contener letras, digitos, \$, \_
 No puede iniciar con un numero
 Key sensitive
 
@@ -192,19 +206,21 @@ Local: Solo vive dentro de la funcion
 Mecanismo de JS en donde las variables y las funciones declaradas son movidas hacia el comienzo de su scope (arriba), antes de su ejecución.
 
 Funciona con:
+
 - var: a nivel de bloque
 - Indicando solo el nombre de la variable: a nivel global
 
 ### Condiciones
+
 - if
 - switch
 
 ### Ciclos
 
-- for 
+- for
 - do ... while
 - while
-- for ... in 
+- for ... in
 - for ... of : La sentencia for...of crea un bucle iterando sobre objetos iterables (incluyendo Array, Map, Set, argumentos, objetos etc), invocando una iteración personalizada conectando con sentencias para ser ejecutadas por el valor de cada propiedad distinta.
 
 ### Palabras reservadas
@@ -225,13 +241,13 @@ Funciones anonimas
 Arrow functions
 (parametros) => {}
 
-** Ejercicio rama practice
+\*\* Ejercicio rama practice
 
-## Clase 3: API ( Application Programming Interface)  - 18/05/2019
+## Clase 3: API ( Application Programming Interface) - 18/05/2019
 
 - Permite comunicación entre 2 aplicacíones
-    - Request
-    - Response
+  - Request
+  - Response
 - Abstracción del proceso real que esta sucediendo
 - Es necesario conocer la interfaz de la API (Documentacion)
 - Código reutilizable
@@ -239,18 +255,19 @@ Arrow functions
 ### Browser API
 
 - DOM
-- Fetch API: 
+- Fetch API:
 - Web Audio API
 - WebGL
 
 ### DOM: Document Object Model
+
 - Creado por el navegador
 - Arbol de objetos
 - como son objetos, podemos:
-    - Crear - **Create**
-    - Cambiar - **Change**
-    - Obtener - **Get**
-    - Eliminar - **Delete**
+  - Crear - **Create**
+  - Cambiar - **Change**
+  - Obtener - **Get**
+  - Eliminar - **Delete**
 
 #### Crear
 
@@ -301,7 +318,7 @@ Capturing: El evento se propaga desde el elemento mas externo hasta el mas inter
 Propagación de eventos en el DOM
 
 ```javascript
-event.stopPropagation() 
+event.stopPropagation();
 ```
 
 #### Event listeners
@@ -317,8 +334,8 @@ element.addEventListener(event, function, useCapture) //useCapture especifica si
 - Cualquier contexto
 - Petición HTTP
 - Devuelve una representación de información
-    - JSON
-    - XML
+  - JSON
+  - XML
 
 #### Request
 
@@ -339,7 +356,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 - Delete
 
 - Options
--Trace
+  -Trace
 - Head
 
 ##### Response
@@ -379,15 +396,15 @@ Endpoints: Urls que devuelven la información formateada
 Retorna una promesa
 
 ```javascript
-fetch('http://example.com/movies.json')
+fetch("http://example.com/movies.json")
   .then(function(response) {
-      return response.json();
+    return response.json();
   })
   .then(function(myJson) {
-      console.log(myJson);
+    console.log(myJson);
   })
   .catch(function(error) {
-      console.log('Error:' + error.message);
+    console.log("Error:" + error.message);
   });
 ```
 
@@ -408,16 +425,15 @@ Ejercicio third-party
 // Export
 const miVariable = "Top Gun Lab";
 export default miVariable;
- 
+
 // Import
 import miVariable from "...";
 ```
 
 ```javascript
-	
 // Export
 export const miVariable = "Top Gun Lab";
- 
+
 // Import
 import { miVariable } from "...";
 ```
@@ -426,25 +442,25 @@ import { miVariable } from "...";
 
 ```javascript
 class Poligono {
-  constructor (height, width) {
-      this.height = height;
-      this.width = width;
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
   }
- 
+
   // Getter
-  get area  ()   {
-      return this.calcArea();
+  get area() {
+    return this.calcArea();
   }
- 
+
   // Método
-  calcArea () {
-      return this.height * this.width ;
+  calcArea() {
+    return this.height * this.width;
   }
 }
- 
-const cuadrado = new Poligono (10, 10);
- 
-console.log(cuadrado.area); // 100 
+
+const cuadrado = new Poligono(10, 10);
+
+console.log(cuadrado.area); // 100
 ```
 
 ### Spread operator
@@ -458,8 +474,8 @@ const miNuevoArreglo = [...miArreglo, "Laura"];
 console.log(miNuevoArreglo); //[ 'Camilo', 'Robin', 'David', 'Laura' ]
 
 const miObjeto = {
-    nombre: "Robin",
-    apellido: "Hurtado"
+  nombre: "Robin",
+  apellido: "Hurtado"
 };
 ```
 
@@ -467,13 +483,13 @@ const miObjeto = {
 
 ```javascript
 const miNuevoObjeto = {
-    ...miObjeto,
-    profesion: "Front End Dev"
+  ...miObjeto,
+  profesion: "Front End Dev"
 };
 
 console.log(miNuevoObjeto);
 
-// {    
+// {
 //     nombre: 'Robin',
 //     apellido: 'Hurtado',
 //     profesion: 'Front End Dev'
@@ -498,12 +514,12 @@ console.log(tercero); // "David"
 
 ```javascript
 const miObjeto = {
-    nombre: "Robin",
-    apellido: "Hurtado",
-    profesion: "Front End Dev"
+  nombre: "Robin",
+  apellido: "Hurtado",
+  profesion: "Front End Dev"
 };
 
-const {nombre, apellido, profesion} = miObjeto;
+const { nombre, apellido, profesion } = miObjeto;
 
 console.log(nombre); // "Robin"
 console.log(apellido); // "Hurtado"
@@ -542,10 +558,8 @@ Es un objeto con información que afecta el método render de un componente, el 
 
 El componente es re-renderizado cada vez que el estado es actualizado.
 
-
 ```javascript
-
 ```
-```javascript
 
+```javascript
 ```
